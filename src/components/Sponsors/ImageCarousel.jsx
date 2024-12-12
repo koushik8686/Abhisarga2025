@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { carouselData } from './data/carouselData';
-import Navigation from './Navigation';
-import ProgressBar from './ProgressBar';
 import Timeline from './Timeline';
 import CarouselSlide from './CarouselSlide';
 import Thumbnails from './Thumbnails';
@@ -12,7 +10,8 @@ import NavigationArrows from './NavigationArrows';
 export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-
+  console.log(progress);
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
