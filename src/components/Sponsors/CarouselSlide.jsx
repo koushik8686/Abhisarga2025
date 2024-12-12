@@ -1,0 +1,27 @@
+import React from 'react';
+
+export default function CarouselSlide({ item, isActive }) {
+  return (
+    <div
+      className={`absolute inset-0 transition-all duration-700 ease-in-out
+        ${isActive ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10" />
+      <img
+        src={item.image}
+        alt={item.title}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute top-1/2 left-[10%] -translate-y-1/2 max-w-xl z-20">
+        <div className="flex items-center gap-5 mb-4">
+          <span className="text-orange-500">{item.author}</span>
+          <span className="text-white/80">{item.date}</span>
+        </div>
+        <h2 className="text-white text-5xl font-bold mb-3">{item.title}</h2>
+        <h3 className="text-2xl text-orange-500 mb-5">{item.topic}</h3>
+        <p className="text-white/80 mb-8">{item.description}</p>
+       
+      </div>
+    </div>
+  );
+}

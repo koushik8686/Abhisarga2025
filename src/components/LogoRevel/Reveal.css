@@ -1,0 +1,239 @@
+/* Define the lightning effect animation */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Henny+Penny&display=swap');
+
+@keyframes lightning {
+
+    0% {
+        opacity: 0;
+    }
+    0.1% {
+        opacity: 1;
+    }
+    10%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes lightning2 {
+    0% {
+        opacity: 0;
+    }
+    0.1% {
+        opacity: 0.4;
+    }
+    10%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* Apply the animation to the div */
+.lightning-effect {
+    position: relative;
+    left: 65vw;
+    bottom: 20vh;
+    opacity: 0;
+    z-index:3;
+    animation: lightning 15s 1s ease-in-out infinite;
+}
+.lightning-effect2 {
+    position: relative;
+     transform: rotate(180deg) ;
+    right: 55vw;
+    opacity: 0;
+    z-index: 3;
+    animation: lightning 15s 3s ease-in-out infinite;
+}
+
+/* Optional: Add a glow effect to make it look more like lightning */
+.lightning-effect img {
+    /* transform: rotate(180deg) translate(-20px, -20px); */
+    filter: brightness(3.5) contrast(3.5);  /* Increase brightness for flash effect */
+}
+
+.heading-letter {
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-size: 9rem;
+    color: white;
+    opacity: 0;
+    transition: font-size 0.5s ease, color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
+  }
+  
+  .heading-letter:hover {
+    font-size: 12rem;
+    color: #7D83FF; /* Soft violet tone */
+    text-shadow: 0px 0px 15px #7D83FF, 0px 0px 30px #7D83FF; /* Glow effect */
+    transform: rotate(10deg) scale(1.1); /* Slight rotation and scaling */
+  }
+  
+
+/* Reveal.css */
+  
+  @keyframes pop-in {
+    0% {
+      transform: translate(-50%, -50%) scale(0.2) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2) rotate(15deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-from-left {
+    0% {
+      transform: translateX(-1000%);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(20%);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-from-right {
+    0% {
+      transform: translateX(1000%);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(-20%);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-from-top {
+    0% {
+      transform: translateY(-1000%) rotate(-15deg);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(20%) rotate(10deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scale-up {
+    0% {
+      transform: scale(0.5) rotate(-10deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1) rotate(5deg);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  .particle {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.8); /* Example color */
+    border-radius: 50%; /* Make it circular */
+    width: 5px; /* Example size */
+    height: 5px; /* Example size */
+    pointer-events: none; /* Prevent mouse events */
+    animation: fall 1s ease-out forwards, fade 1s ease-out forwards; /* Fall and fade animations */
+  }
+  
+  /* Define the fall animation */
+  @keyframes fall {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(200px) scale(1.5); /* Fall down and grow in size */
+      opacity: 0; /* Fade out */
+    }
+  }
+  
+  /* Define the fade effect */
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* From Uiverse.io by Navarog21 */ 
+button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    animation: 8s linear forwards;
+    cursor: pointer;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  @keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
