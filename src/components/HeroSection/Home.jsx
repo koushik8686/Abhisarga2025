@@ -12,7 +12,7 @@ const HeroSection = () => {
   console.log("PreLoader", isLoadingPreLoader);
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-900 relative">
+    <div className=" relative flex flex-col min-h-screen bg-slate-900 relative">
       {/* <PreLoader onLoadingComplete={() => setIsLoadingPreLoader(() => false)} /> */}
       {!isLoadingPreLoader && isLoading && <Loader></Loader>}
       {!isLoadingPreLoader && !isLoading && (

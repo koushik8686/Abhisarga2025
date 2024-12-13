@@ -68,7 +68,7 @@ const Sponsors = () => {
   };
 
   return (
-    <div id='sponsors' className="min-h-screen 
+    <div id='sponsors' className="  min-h-screen 
     bg-black 
      py-20 px-4">
       <motion.div

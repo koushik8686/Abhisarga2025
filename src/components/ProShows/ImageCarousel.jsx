@@ -41,10 +41,9 @@ export default function ImageCarousel() {
   };
 
   return (
-    <div className="h-screen relative overflow-hidden">
+    <div className=" h-screen relative overflow-hidden">
       {/* Progress bar - full width on all screens */}
       <ProgressBar progress={progress} />
-
       {/* Navigation - responsive padding */}
       {/* <div className="px-4 sm:px-6 lg:px-8">
         <Navigation />
