@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function CarouselSlide({ item, isActive }) {
   return (
     <div
@@ -20,7 +19,11 @@ export default function CarouselSlide({ item, isActive }) {
         <h2 className="text-white text-5xl font-bold mb-3">{item.title}</h2>
         <h3 className="text-2xl text-orange-500 mb-5">{item.topic}</h3>
         <p className="text-white/80 mb-8">{item.description}</p>
-       
+        <div className="flex gap-4">
+          <button className="px-8 py-3 bg-orange-500 rounded-full hover:bg-orange-600 transition-colors">
+            SEE MORE
+          </button>
+        </div>
       </div>
     </div>
   );

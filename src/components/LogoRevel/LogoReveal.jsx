@@ -1,7 +1,6 @@
  
 import React, { useEffect } from "react";
 import { LogoRevel } from "./Page";
-import './Reveal.css'; // Import the CSS for the animation
 
 const Reveal = ({setdisplay}) => {
   useEffect(() => {

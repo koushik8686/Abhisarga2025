@@ -31,7 +31,6 @@
     }
 }
 
-/* Apply the animation to the div */
 .lightning-effect {
     position: relative;
     left: 65vw;
@@ -49,10 +48,8 @@
     animation: lightning 15s 3s ease-in-out infinite;
 }
 
-/* Optional: Add a glow effect to make it look more like lightning */
 .lightning-effect img {
-    /* transform: rotate(180deg) translate(-20px, -20px); */
-    filter: brightness(3.5) contrast(3.5);  /* Increase brightness for flash effect */
+    filter: brightness(3.5) contrast(3.5);  
 }
 
 .heading-letter {
@@ -66,13 +63,10 @@
   
   .heading-letter:hover {
     font-size: 12rem;
-    color: #7D83FF; /* Soft violet tone */
-    text-shadow: 0px 0px 15px #7D83FF, 0px 0px 30px #7D83FF; /* Glow effect */
-    transform: rotate(10deg) scale(1.1); /* Slight rotation and scaling */
+    color: #7D83FF; 
+    text-shadow: 0px 0px 15px #7D83FF, 0px 0px 30px #7D83FF; 
+    transform: rotate(10deg) scale(1.1); 
   }
-  
-
-/* Reveal.css */
   
   @keyframes pop-in {
     0% {

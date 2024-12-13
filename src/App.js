@@ -1,26 +1,33 @@
- 
 import React from "react";
-import { useState } from "react";
-import Reveal from "./components/LogoRevel/LogoReveal";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Reveal from "./components/LogoRevel/LogoReveal";
 import Location from "./components/Location/Location";
-import HeadingComponent from './components/HeadingComponent'
-import ImageCarousel from './components/Sponsors/ImageCarousel'
-import './App.css'
-export default function Home() {
-  const [display, setdisplay] = useState("intro")
-  return (
-  <React.StrictMode>
-   <div>
-    {display==="intro"&& <Reveal setdisplay={setdisplay}/>}
-    {display==="main"&&
-    <>
-    <HeadingComponent text="Pro Shows"/>
-    <ImageCarousel/>
-    <Location/>
-    </>
-    }
+// import HeadingComponent from './components/HeadingComponent';
+import ImageCarousel from './components/ProShows/ImageCarousel';
+import Sponsors from "./components/Sponsors/Sponsors";
+import { TabsDemo } from "./components/TimeLine/Tabs";
+import Hero from './components/HeroSection/Home'
+import './App.css';
 
-   </div>
-   </React.StrictMode>
+export default function Home() {
+  return (
+    <BrowserRouter>
+      <React.StrictMode>
+        <Routes>
+          <Route path="/events" element={<TabsDemo />} />
+          <Route 
+            path="/" 
+            element={
+              <>
+                <Hero/>
+                <ImageCarousel />
+                <Sponsors />
+                <Location />
+              </>
+            } 
+          />
+        </Routes>
+      </React.StrictMode>
+    </BrowserRouter>
   );
 }
