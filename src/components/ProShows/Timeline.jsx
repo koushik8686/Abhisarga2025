@@ -117,7 +117,7 @@ export default function Timeline({ total, currentIndex, onSelect }) {
   return (
     <div className={cn(
       /* Base styles */
-      'fixed z-50 flex',
+      'absolute z-50 flex',
       'transition-all duration-500 ease-in-out',
       
       /* Mobile: horizontal bottom layout */

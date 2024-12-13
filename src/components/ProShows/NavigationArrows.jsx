@@ -26,7 +26,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 function NavigationArrows({ onPrev, onNext }) {
   return (
     <div className="
-      fixed bottom-6 left-6
+      absolute bottom-6 left-6
       flex items-center gap-3
       z-50
     ">

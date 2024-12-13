@@ -37,8 +37,7 @@ const cn = (...classes) => classes.filter(Boolean).flat().join(' ').trim();
 export default function Thumbnails({ items, currentIndex, onSelect }) {
   return (
     <div className="
-      /* Container positioning */
-      fixed z-50
+      absolute z-50
       left-1/2 -translate-x-1/2
       bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-10
       w-[95vw] sm:w-[90vw] md:w-[85vw] lg:w-auto

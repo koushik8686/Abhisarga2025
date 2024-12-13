@@ -18,7 +18,7 @@ function ProgressBar({ progress }) {
   return (
     <div 
       className="
-        absolute top-0 left-0 w-full z-50
+        absolute  w-full z-50
         transition-all duration-300 ease-linear
         h-0.5 sm:h-[2px]
         bg-gray-800/80
