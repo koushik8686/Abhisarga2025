@@ -24,7 +24,7 @@ export const FloatingDock = ({ desktopClassName }) => {
     {
       title: "Home",
       icon: <IconHome className="h-full w-full text-neutral-300" />,
-      href: "#",
+      to: "/",
     },
     {
       title: "Sponsors",

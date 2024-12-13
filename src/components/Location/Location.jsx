@@ -43,6 +43,7 @@ const Location = () => {
     <animated.div
       style={pageAnimation}
       className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6"
+      id="location"
     >
       <animated.h1
         style={{ ...textAnimation, ...headingHoverAnimation }}

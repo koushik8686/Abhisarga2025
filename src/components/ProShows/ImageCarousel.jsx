@@ -6,7 +6,7 @@ import Timeline from './Timeline';
 import CarouselSlide from './CarouselSlide';
 import Thumbnails from './Thumbnails';
 import NavigationArrows from './NavigationArrows';
-
+import Navigation from './Navigation';
 export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
