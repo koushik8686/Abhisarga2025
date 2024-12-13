@@ -8,7 +8,6 @@ import { useState } from "react";
 const HeroSection = () => {
   const { isLoading, loadedImages } = usePreloadImages();
   const [isLoadingPreLoader, setIsLoadingPreLoader] = useState(false);
-  setIsLoadingPreLoader(false)
   console.log("IMAGES", isLoading);
   console.log("PreLoader", isLoadingPreLoader);
 
