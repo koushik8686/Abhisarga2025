@@ -109,7 +109,7 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { carouselData } from '../data/carouselData';
+import { carouselData } from './data/carouselData';
 import Navigation from './Navigation';
 import ProgressBar from './ProgressBar';
 import Timeline from './Timeline';
