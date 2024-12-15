@@ -34,7 +34,7 @@ const MemoizedProductCard = React.memo(
           alt={product.title}
           initial={{ opacity: 0.8 }}
           animate={{
-            opacity: isHovered ? 0.7 : 1,
+            opacity: isHovered ? 0.9 : 1,
           }}
           transition={{
             duration: 0.3,
@@ -49,7 +49,7 @@ const MemoizedProductCard = React.memo(
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
-            opacity: isHovered ? 0.8 : 0,
+            opacity: isHovered ? 0 : 0,
           }}
           transition={{ duration: 0.3 }}
           className="absolute inset-0 h-full w-full bg-black pointer-events-none"
