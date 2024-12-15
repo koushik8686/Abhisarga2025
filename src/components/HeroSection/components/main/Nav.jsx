@@ -45,7 +45,7 @@ export const FloatingDock = ({ desktopClassName }) => {
 
   return (
     <>
-      <FloatingDockDesktop items={links} className={desktopClassName} />
+      <FloatingDockDesktop style={{ zIndex: 999 }} items={links} className={desktopClassName} />
     </>
   );
 };
